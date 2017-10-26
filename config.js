@@ -15,9 +15,11 @@ exports.config = {
     // They may include glob patterns.
     // specs: 'spec.js',
     suites: {
-        jasmine: 'spec/jasmine/*.js',
-        pageObject: 'spec/pageObjectsTest/*.js',
-        flow: 'spec/pageObjectsTest/flowTest.js'
+     //   jasmine: 'spec/jasmine/*.js',
+     //   pageObject: 'spec/pageObjectsTest/*.js',
+      //  flow: 'spec/pageObjectsTest/flowTest.js',
+       // testWoman: 'spec/pageObjectsTest/womanTshirtTest.js',
+        testDresses: 'spec/pageObjectsTest/dressesTest.js'
     },
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {
@@ -25,7 +27,7 @@ exports.config = {
     },
     onPrepare:function(){
         global.using = using;
-        global.ignoreSynchronization = true;
-        global.pageObjectDir = __dirname+"./pageObject";
+    //    browser.global.ignoreSynchronization = true;
+        global.pageObjectDir = __dirname +"./pageObject";
     },
 };
